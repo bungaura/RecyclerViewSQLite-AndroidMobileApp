@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyFragment</string>
+    <string name="home">Home</string>
+    <string name="about_us">About Us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="binus_alam_sutera">BINUS @Alam Sutera</string>
+    <string name="address_binus">Jl. Jalur Sutera Barat Kav. 21, Alam Sutera, Tangerang</string>
+    <string name="enter_data_to_be_saved">Enter data to be saved:</string>
+</resources>

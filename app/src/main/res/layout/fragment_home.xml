@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeFragment"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/home_enterData_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="@string/enter_data_to_be_saved"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="@font/ls_semibold" />
+
+        <TextView
+            android:id="@+id/home_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="Name"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ls_medium"/>
+
+        <EditText
+            android:id="@+id/home_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/ls_regular"
+            android:hint="Enter name..."
+            android:background="@drawable/background_input"/>
+
+        <TextView
+            android:id="@+id/home_email_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="Email"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ls_medium"/>
+
+        <EditText
+            android:id="@+id/home_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/ls_regular"
+            android:hint="Enter email..."
+            android:background="@drawable/background_input"/>
+
+        <TextView
+            android:id="@+id/home_pass_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="Password"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ls_medium"/>
+
+        <EditText
+            android:id="@+id/home_pass_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/ls_regular"
+            android:hint="Enter password..."
+            android:background="@drawable/background_input"/>
+
+        <include layout="@layout/item_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>

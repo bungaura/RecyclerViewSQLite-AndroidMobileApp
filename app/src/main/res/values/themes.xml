@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyFragment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/darkgreen</item>
+    </style>
+
+    <style name="MyBottomNavViewStyle" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:fontFamily">@font/ls_medium</item>
+    </style>
+
+    <style name="Theme.MyFragment" parent="Base.Theme.MyFragment" />
+</resources>

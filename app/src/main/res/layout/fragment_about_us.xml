@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/aboutUsFragment"
+    tools:context=".fragment.AboutUsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/aboutus_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo_binus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/aboutus_photo">
+
+            <TextView
+                android:id="@+id/aboutus_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/binus_alam_sutera"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:fontFamily="@font/ls_semibold"/>
+            <TextView
+                android:id="@+id/aboutus_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address_binus"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ls_medium"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

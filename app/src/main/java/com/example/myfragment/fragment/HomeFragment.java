@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.myfragment.R;
-import com.example.myfragment.adapter.DataAdapter;
 import com.example.myfragment.database.DatabaseHelper;
 
 public class HomeFragment extends Fragment {
@@ -43,12 +42,17 @@ public class HomeFragment extends Fragment {
                 String email = emailEt.getText().toString();
                 String pass = passEt.getText().toString();
 
-                Boolean isInsertValid = db.insertData(name, email, pass);
-                if (isInsertValid){
-                    Toast.makeText(getActivity(), name + " data has just been saved!", Toast.LENGTH_LONG).show();
+                if (name.isEmpty() || email.isEmpty() || pass.isEmpty()){
+                    Toast.makeText(getActivity(), "All fields cannot be empty!", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(getActivity(), "Failed to save data!", Toast.LENGTH_LONG).show();
+                    boolean isInsertValid = db.insertData(name, email, pass);
+                    if (isInsertValid) {
+                        Toast.makeText(getActivity(), name + " data has just been saved!", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getActivity(), "Failed to save data!", Toast.LENGTH_LONG).show();
+                    }
                 }
+
             }
         });
 
@@ -57,7 +61,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.homeFragment, new ShowDataFragment());
-                transaction.addToBackStack(null);  // Optional: Add to back stack if needed
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
